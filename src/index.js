@@ -1,6 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
+import Menu from "../src/componentes/menu/Menu"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 var player = { score: 1, name: "Jeff" }
 player.score = 2
@@ -110,14 +112,22 @@ class Game extends React.Component {
     }
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board squares={current.squares} onClick={i => this.handleClick(i)} />
+      <div className="background">
+        <Menu />
+        <br></br>
+        <div className="game">
+          <div className="game-board">
+            <Board
+              squares={current.squares}
+              onClick={i => this.handleClick(i)}
+            />
+          </div>
+          <div className="game-info">
+            <div>{status}</div>
+            <ol>{moves}</ol>
+          </div>
         </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
+        <br></br>
       </div>
     )
   }

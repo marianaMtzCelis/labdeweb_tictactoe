@@ -19,7 +19,7 @@ ul {
 }
 
 .square {
-  background: #fff;
+  background: #09e8de;
   border: 1px solid #999;
   float: left;
   font-size: 24px;
@@ -44,8 +44,13 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  margin: 20px;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.background {
+  background-color: e0e2e2;
 }
